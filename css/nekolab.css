@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Kaisotai-Next-UP-B";
+  src: url(../fonts/Kaisotai-Next-UP-B.ttf);
+}
+
+#title > h1 {
+  font-family: "Kaisotai-Next-UP-B";
+}
+
+canvas {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  /* background-attachment: fixed; */
+  /* background-image: ""; */
+  /* background-repeat: repeat; */
+  /* background-position: center; */
+  background-color: #e9e6d7;
+  filter: brightness(.3);
+  z-index: -1;
+  top: 0;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+  /* cursor: url(../images/cursor.png) 18 10, auto !important; */
+}
+
+#footer a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+#tab li {
+  border-radius: 5px;
+}
+
+#tab a {
+  color: white;
+  text-decoration: none;
+}
+
+#tab li.active {
+  background: white;
+  color: black;
+}
+
+#tab li.active a,
+#tab li.active svg {
+  color: black !important;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.vc-container {
+  width: 100%;
+  max-width: 270px;
+}
+
+canvas {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#cropper-modal-image {
+  display: block;
+  max-width: 100%;
+}
