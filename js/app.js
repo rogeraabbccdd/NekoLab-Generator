@@ -59,10 +59,18 @@ const app = Vue.createApp({
       }
       // Draw Texts
       const fonts = 'Noto Sans TC, Noto Sans JP'
+	  // WebKit Text Problem Workaround
+	  if(navigator.userAgent.indexOf('AppleWebKit') != -1){
+		colorText(input.value.name, 540, 250, '#3e3e3e', 60, fonts, 450, 'left')
+		colorText(input.value.nickname, 990, 330, '#3e3e3e', 25, fonts, 470, 'right')
+		colorText(`${input.value.grade}年${input.value.class}組`, 545, 405, '#3e3e3e', 40, fonts, 180, 'left')
+		colorText(`${birthDateComputed.value.getMonth()+1}月${birthDateComputed.value.getDate()}日`, 800, 405, '#3e3e3e', 40, fonts, 180, 'left')
+	  } else {
       colorText(input.value.name, 540, 275, '#3e3e3e', 60, fonts, 450, 'left')
       colorText(input.value.nickname, 990, 335, '#3e3e3e', 25, fonts, 470, 'right')
       colorText(`${input.value.grade}年${input.value.class}組`, 545, 415, '#3e3e3e', 40, fonts, 180, 'left')
       colorText(`${birthDateComputed.value.getMonth()+1}月${birthDateComputed.value.getDate()}日`, 800, 415, '#3e3e3e', 40, fonts, 180, 'left')
+	  }
     }
 
     const colorText = (text, x, y, color, size, font, range, align) => {
